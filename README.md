@@ -22,8 +22,10 @@
 
 ## Screenshots
 
-<!-- Add screenshots here — drag images into this section on GitHub, or place them in a /screenshots folder -->
-> Screenshots coming soon. Download and see for yourself!
+<img width="1280" height="720" alt="PulseMonitor" src="https://github.com/user-attachments/assets/d6140cf8-0de8-4e94-8756-396c94a29320" />
+<img width="1280" height="720" alt="PulseMonitorCPU" src="https://github.com/user-attachments/assets/1eb3c8a7-abe5-48e8-941a-a4a5968972ea" />
+<img width="1280" height="720" alt="PulseMonitorGPU" src="https://github.com/user-attachments/assets/68fe39cc-a9a0-44cc-a0ca-0f356afd42c3" />
+<img width="1280" height="720" alt="PulseMonitorSettings" src="https://github.com/user-attachments/assets/04d18e42-d720-44a5-936a-41258c23a4f9" />
 
 ---
 

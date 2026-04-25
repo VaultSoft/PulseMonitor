@@ -1,6 +1,16 @@
 # PulseMonitor
 
-A lightweight PC health monitor for Windows — real-time CPU, GPU, RAM, and system stats in a clean desktop overlay.
+> Lightweight real-time PC health monitor for Windows — CPU, GPU, RAM & disk stats in a clean desktop overlay.
+
+<p align="center">
+  <a href="https://github.com/VaultSoft/PulseMonitor/releases/latest">
+    <img src="https://img.shields.io/github/v/release/VaultSoft/PulseMonitor?style=flat-square&label=latest%20release&color=4CAF50" alt="Latest Release" />
+  </a>
+  <img src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Platform" />
+  <img src="https://img.shields.io/badge/price-free-brightgreen?style=flat-square" alt="Free" />
+  <img src="https://img.shields.io/badge/portable-yes-orange?style=flat-square" alt="Portable" />
+  <img src="https://img.shields.io/github/stars/VaultSoft/PulseMonitor?style=flat-square&color=yellow" alt="GitHub Stars" />
+</p>
 
 <p align="center">
   <a href="https://vaultsoft.gumroad.com/l/PulseMonitor">
@@ -10,24 +20,52 @@ A lightweight PC health monitor for Windows — real-time CPU, GPU, RAM, and sys
 
 ---
 
+## Screenshots
+
+<!-- Add screenshots here — drag images into this section on GitHub, or place them in a /screenshots folder -->
+> Screenshots coming soon. Download and see for yourself!
+
+---
+
 ## Features
 
-- Real-time CPU, GPU, RAM, and disk monitoring
-- Clean, minimal desktop overlay
-- Low resource usage
-- Auto-updater — always stay on the latest version
-- Windows installer included
+| Feature | Details |
+|---|---|
+| **CPU monitoring** | Per-core usage, clock speed, temperature |
+| **GPU monitoring** | Usage, VRAM, temperature (AMD & NVIDIA) |
+| **RAM & disk** | Real-time memory usage and disk I/O |
+| **Desktop overlay** | Clean, always-on-top panel — stays out of your way |
+| **Low footprint** | Minimal CPU and memory usage while running |
+| **Auto-updater** | Silently keeps itself up to date |
+| **No install needed** | Portable — just run the `.exe` |
+
+---
 
 ## Download
 
-Get the latest version on Gumroad:
+Get the latest version free on Gumroad:
 
 **[https://vaultsoft.gumroad.com/l/PulseMonitor](https://vaultsoft.gumroad.com/l/PulseMonitor)**
 
+Or grab a release directly from [GitHub Releases](https://github.com/VaultSoft/PulseMonitor/releases/latest).
+
+---
+
 ## Requirements
 
-- Windows 10/11 (64-bit)
-- No Python required — standalone installer
+- Windows 10 or 11 (64-bit)
+- No Python required — standalone `.exe`, no installation needed
+
+---
+
+## Feedback & Feature Requests
+
+Got ideas or spotted a bug? I'd love to hear from you.
+
+- **[Leave feedback](https://github.com/VaultSoft/PulseMonitor/issues/1)** — tell me what features you want to see
+- **[Open a bug report](https://github.com/VaultSoft/PulseMonitor/issues/new)** — something not working? Let me know
+
+---
 
 ## License
 

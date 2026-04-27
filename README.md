@@ -16,6 +16,10 @@
   <a href="https://vaultsoft.gumroad.com/l/PulseMonitor">
     <img src="https://img.shields.io/badge/⬇%20Download%20PulseMonitor-FF90E8?style=for-the-badge&logo=gumroad&logoColor=black" alt="Download on Gumroad" />
   </a>
+  &nbsp;
+  <a href="https://ko-fi.com/vaultsoft">
+    <img src="https://img.shields.io/badge/☕%20Support%20on%20Ko--fi-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Support on Ko-fi" />
+  </a>
 </p>
 
 ---

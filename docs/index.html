@@ -252,6 +252,8 @@
     @keyframes ar { 0%,100%{width:70%} 60%{width:74%} }
     .f-disk { background: var(--orange); animation: ad 8s ease-in-out infinite; }
     @keyframes ad { 0%,100%{width:24%} 50%{width:39%} }
+    .f-net { background: var(--accent); animation: anet 3.5s ease-in-out infinite; }
+    @keyframes anet { 0%,100%{width:30%} 50%{width:58%} }
 
     .win-foot {
       display: flex; justify-content: space-between;
@@ -484,7 +486,7 @@
       </div>
 
       <div class="hero-pills">
-        <div class="pill"><strong>v1.0.0</strong><span>Latest</span></div>
+        <div class="pill"><strong>v1.1.0</strong><span>Latest</span></div>
         <div class="pill"><strong>Free</strong><span>Always</span></div>
         <div class="pill"><strong>~50 MB</strong><span>RAM footprint</span></div>
         <div class="pill"><strong>Portable</strong><span>No installer</span></div>
@@ -497,7 +499,7 @@
       <div class="app-window">
         <div class="win-bar">
           <div class="win-title">
-            PULSEMONITOR
+            PULSEMONITOR v1.1.0
           </div>
           <div class="win-btns">
             <div class="win-btn"></div>
@@ -532,11 +534,11 @@
           </div>
           <div class="w-row">
             <div class="w-head">
-              <span class="w-label"><span class="w-dot" style="background:var(--orange)"></span>DISK</span>
-              <span class="w-val">145 MB/s</span>
+              <span class="w-label"><span class="w-dot" style="background:var(--accent)"></span>NET</span>
+              <span class="w-val">38.4 MB/s</span>
             </div>
-            <div class="w-bar"><div class="w-fill f-disk"></div></div>
-            <div class="w-sub">Samsung 970 EVO &nbsp;·&nbsp; 512 GB NVMe</div>
+            <div class="w-bar"><div class="w-fill f-net"></div></div>
+            <div class="w-sub">↓ 34.1 &nbsp;·&nbsp; ↑ 4.3 MB/s</div>
           </div>
         </div>
         <div class="win-foot">
@@ -598,26 +600,23 @@
       <div class="feat-card">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#2AFFD5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="15" width="20" height="7" rx="1.5"/>
-            <rect x="14" y="17" width="3" height="3" rx="0.5"/>
-            <rect x="18.5" y="17" width="2" height="3" rx="0.5"/>
-            <rect x="3" y="17.5" width="8" height="2" rx="0.5"/>
+            <line x1="17" y1="7" x2="17" y2="17"/><polyline points="13 11 17 7 21 11"/>
+            <line x1="7" y1="17" x2="7" y2="7"/><polyline points="3 13 7 17 11 13"/>
           </svg>
         </div>
-        <h3>System Tray</h3>
-        <p>Minimises to system tray and keeps monitoring in the background — always there when you need it.</p>
+        <h3>Network Monitoring</h3>
+        <p>Real-time upload and download speeds, today's data totals, and a live breakdown of which apps are using your connection.</p>
       </div>
 
       <div class="feat-card">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="#2AFFD5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="23 4 23 10 17 10"/>
-            <polyline points="1 20 1 14 7 14"/>
-            <path d="M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+            <rect x="2" y="2" width="20" height="20" rx="2.5"/>
+            <rect x="12" y="12" width="9" height="7" rx="1.5"/>
           </svg>
         </div>
-        <h3>Auto-Updater</h3>
-        <p>Shows a notification when a new version is available with a direct download link.</p>
+        <h3>Mini Overlay</h3>
+        <p>Press Ctrl+Shift+M to summon a compact always-on-top overlay. Drag it anywhere on screen — perfect for gaming without alt-tabbing.</p>
       </div>
 
       <div class="feat-card">
@@ -650,7 +649,7 @@
       <div class="shot shot-main">
         <div class="app-window" style="width:310px; font-size:0.82rem;" aria-label="PulseMonitor overlay — normal usage">
           <div class="win-bar">
-            <div class="win-title">PULSEMONITOR v1.0.0</div>
+            <div class="win-title">PULSEMONITOR v1.1.0</div>
             <div class="win-btns"><div class="win-btn"></div><div class="win-btn"></div><div class="win-btn live"></div></div>
           </div>
           <div class="win-body">
@@ -804,7 +803,7 @@
         ☕ Support on Ko-fi
       </a>
     </div>
-    <p class="cta-note">Windows 10 / 11 &nbsp;·&nbsp; No install required &nbsp;·&nbsp; v1.0.0</p>
+    <p class="cta-note">Windows 10 / 11 &nbsp;·&nbsp; No install required &nbsp;·&nbsp; v1.1.0</p>
   </div>
 </section>
 

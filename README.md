@@ -1,6 +1,6 @@
 # PulseMonitor
 
-> Lightweight real-time PC health monitor for Windows — CPU, GPU, RAM & disk stats in a clean desktop overlay.
+> Lightweight real-time PC health monitor for Windows — CPU, GPU, RAM, network & disk stats in a clean desktop overlay.
 
 <p align="center">
   <a href="https://github.com/VaultSoft/PulseMonitor/releases/latest">
@@ -42,9 +42,15 @@
 | **CPU monitoring** | Per-core usage, clock speed, temperature |
 | **GPU monitoring** | Usage, VRAM, temperature (AMD & NVIDIA) |
 | **RAM & disk** | Real-time memory usage and disk I/O |
-| **Desktop overlay** | Clean, always-on-top panel — stays out of your way |
-| **Low footprint** | Minimal CPU and memory usage while running |
-| **Auto-updater** | Silently keeps itself up to date |
+| **Network monitoring** | Real-time upload/download speeds and active connections |
+| **Mini overlay** | Press Ctrl+Shift+M for always-on-top gaming overlay |
+| **Performance history** | Graphs for last 1 hr / 24 hr / 7 days |
+| **Process manager** | End Task with safety warnings for system processes |
+| **Startup manager** | Add and remove startup programs |
+| **Theme toggle** | Light and dark mode |
+| **CSV export** | Export current stats to CSV |
+| **Low footprint** | Under 5% CPU usage while monitoring |
+| **Auto-updater** | Shows notification when new version available |
 | **No install needed** | Portable — just run the `.exe` |
 
 ---
@@ -77,4 +83,4 @@ Got ideas or spotted a bug? I'd love to hear from you.
 
 ## License
 
-© VaultSoft. All rights reserved.
+© VaultSoft. Released under the MIT Licence.

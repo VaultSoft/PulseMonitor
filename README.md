@@ -26,10 +26,12 @@
 
 ## Screenshots
 
-<img width="1280" height="720" alt="PulseMonitor" src="https://github.com/user-attachments/assets/d6140cf8-0de8-4e94-8756-396c94a29320" />
-<img width="1280" height="720" alt="PulseMonitorCPU" src="https://github.com/user-attachments/assets/1eb3c8a7-abe5-48e8-941a-a4a5968972ea" />
-<img width="1280" height="720" alt="PulseMonitorGPU" src="https://github.com/user-attachments/assets/68fe39cc-a9a0-44cc-a0ca-0f356afd42c3" />
-<img width="1280" height="720" alt="PulseMonitorSettings" src="https://github.com/user-attachments/assets/04d18e42-d720-44a5-936a-41258c23a4f9" />
+<img width="2560" height="1392" alt="PulseMonitor_Dashboard_Dark" src="https://github.com/user-attachments/assets/5b9d4d8e-ae6e-4c1c-807d-9292eeaf6aa7" />
+<img width="2560" height="1392" alt="PulseMonitor_Dashboard_Light" src="https://github.com/user-attachments/assets/a2e909de-22dd-49a1-8f9c-7086f437c0b5" />
+<img width="2560" height="1392" alt="PulseMonitor_CPU_Dark" src="https://github.com/user-attachments/assets/91e93b49-c0bd-4536-b582-25ba393e4daa" />
+<img width="2560" height="1392" alt="PulseMonitor_Network_Dark" src="https://github.com/user-attachments/assets/dd36f99e-7739-4697-98c5-a0dad28ac313" />
+<img width="2560" height="1392" alt="PulseMonitor_History_Dark" src="https://github.com/user-attachments/assets/bf2c5551-38c0-4626-8d95-e15cb6a5b12e" />
+<img width="1474" height="830" alt="PulseMonitor_Settings_Mini-Overlay_Dark" src="https://github.com/user-attachments/assets/918f8179-ad36-4e9c-85e6-448ed3c0d994" />
 
 ---
 

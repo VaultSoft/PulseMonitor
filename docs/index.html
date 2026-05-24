@@ -14,6 +14,86 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PulseMonitor",
+    "description": "Free, portable PC health monitor for Windows. Real-time CPU, GPU, RAM, disk and network monitoring in a clean desktop overlay. No installation required.",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://vaultsoft.github.io/PulseMonitor/",
+    "downloadUrl": "https://vaultsoft.gumroad.com/l/PulseMonitor",
+    "softwareVersion": "1.1.0",
+    "author": {
+      "@type": "Organization",
+      "name": "VaultSoft",
+      "url": "https://vaultsoft.github.io/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is PulseMonitor free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, completely. PulseMonitor is free to download and use forever. There's no trial period, no premium tier, and no subscription."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does PulseMonitor work on Windows 11?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. PulseMonitor runs on both Windows 10 and Windows 11 (64-bit). It's tested on both and works with the latest Windows updates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does PulseMonitor need to be installed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. PulseMonitor is fully portable — just download the .exe and run it. No installer, no admin rights, and no Python or runtime dependencies required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much RAM does PulseMonitor use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Around 50 MB, which is well under what most system monitors use. It's deliberately lightweight so it doesn't eat into the memory it's supposed to be monitoring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is PulseMonitor safe? Will my antivirus flag it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PulseMonitor is safe. Because it's a portable .exe built with PyInstaller, some antivirus software may flag it as a false positive — this is a known quirk with Python-packaged apps, not a sign of anything malicious. The full source code is available on GitHub for anyone to review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What hardware does PulseMonitor support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PulseMonitor supports AMD Ryzen (all generations) and Intel Core CPUs (6th gen and newer), NVIDIA GeForce and RTX GPUs, AMD Radeon RX GPUs, DDR4 and DDR5 RAM, and NVMe, SSD, and HDD storage."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -414,6 +494,24 @@
     .footer-links a:hover { color: var(--text); }
     .footer-copy { font-size: 0.73rem; color: var(--dim); }
 
+    /* ─── FAQ ─── */
+    #faq { background: linear-gradient(180deg, #060916 0%, var(--bg) 100%); }
+
+    .faq-list {
+      display: flex; flex-direction: column;
+      max-width: 780px; margin: 0 auto;
+    }
+    .faq-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q {
+      font-size: 1.02rem; font-weight: 700; color: #fff;
+      margin-bottom: 10px; letter-spacing: -0.01em;
+    }
+    .faq-a { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 940px) {
       .hero-inner { grid-template-columns: 1fr; }
@@ -466,7 +564,7 @@
     <div>
       <div class="badge"><span class="dot" aria-hidden="true"></span>Free for Windows 10 &amp; 11</div>
 
-      <h1>Your PC's health,<br><em>always in view.</em></h1>
+      <h1>Free PC Health Monitor for Windows —<br><em>CPU, GPU &amp; RAM, always in view.</em></h1>
 
       <p class="hero-body">
         Real-time CPU, GPU, RAM and disk stats in a clean, minimal desktop overlay.
@@ -559,7 +657,7 @@
     <div class="s-head center">
       <div class="s-label">Features</div>
       <h2 class="s-title">Everything you need to monitor your rig</h2>
-      <p class="s-sub">Built for gamers, streamers, and power users who want clean, real-time hardware data without the bloat.</p>
+      <p class="s-sub">Built for gamers, streamers, and power users who want clean, real-time hardware data without the bloat. A focused, lightweight alternative to HWiNFO, HWMonitor, and MSI Afterburner — without the learning curve.</p>
     </div>
     <div class="feat-grid">
 
@@ -807,6 +905,49 @@
       </a>
     </div>
     <p class="cta-note">Windows 10 / 11 &nbsp;·&nbsp; No install required &nbsp;·&nbsp; v1.1.0</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="inner">
+    <div class="s-head center">
+      <div class="s-label">FAQ</div>
+      <h2 class="s-title">Common questions</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3 class="faq-q">Is PulseMonitor free?</h3>
+        <p class="faq-a">Yes, completely. PulseMonitor is free to download and use forever — no trial period, no premium tier, no subscription. You can support development on Ko-fi if you'd like, but it's entirely optional.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Does it work on Windows 11?</h3>
+        <p class="faq-a">Yes. PulseMonitor runs on both Windows 10 and Windows 11 (64-bit). It's tested on both and keeps up with the latest Windows updates.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Does it need to be installed?</h3>
+        <p class="faq-a">No. PulseMonitor is fully portable — just download the .exe and run it. No installer, no admin rights, no Python or runtime dependencies. It even runs off a USB drive.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">How much RAM does PulseMonitor use?</h3>
+        <p class="faq-a">Around 50 MB, which is well under what most system monitors use. It's deliberately lightweight so it doesn't eat into the memory it's supposed to be monitoring.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Is it safe? Will my antivirus flag it?</h3>
+        <p class="faq-a">PulseMonitor is safe. Because it's a portable .exe built with PyInstaller, some antivirus tools may raise a false positive — this is a known quirk with Python-packaged apps, not a sign of anything malicious. The full source code is on GitHub for anyone to review.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What hardware does it support?</h3>
+        <p class="faq-a">PulseMonitor works with AMD Ryzen (all generations) and Intel Core CPUs (6th gen+), NVIDIA GeForce &amp; RTX GPUs, AMD Radeon RX GPUs, DDR4 &amp; DDR5 RAM, and NVMe, SSD &amp; HDD storage. It runs on desktops, laptops, and workstations.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 

@@ -4,3 +4,21 @@ __pycache__/
 *.spec.bak
 *.zip
 *.pyc
+
+# ── Diagnostic scratch (files stay on disk, just not in history) ──
+crash.log
+debug.log
+debug_err.txt
+debug_out.txt
+debug_output.txt
+
+# One-off Qt window-visibility smoke test and the log it writes
+qt_test.py
+qt_test_log.txt
+
+# Refactor leftover: a duplicated fragment of pulsemonitor.py. Has no imports,
+# is imported by nothing, and every class in it already lives in pulsemonitor.py.
+_missing.py
+
+# Byte-identical duplicate of the tracked docs/thumbnail.png (root copy only)
+/thumbnail.png

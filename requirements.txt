@@ -3,4 +3,3 @@ pyqtgraph>=0.13.0
 psutil>=5.9.0
 GPUtil>=1.4.0
 wmi>=1.5.1
-pythonnet>=3.0.0

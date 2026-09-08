@@ -135,6 +135,7 @@ a = Analysis(
     binaries=[],
     datas=[
         *_missing_stdlib_pycs,
+        ('_logo_b64.txt', '.'),
     ],
     hiddenimports=[
         # Encodings with .py source present — frozen normally
@@ -178,6 +179,7 @@ exe = EXE(
     [],
     exclude_binaries=True,
     name='PulseMonitor',
+    icon='icon.ico',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

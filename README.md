@@ -22,6 +22,8 @@
   </a>
 </p>
 
+> 🆕 **New:** install, update and launch every VaultSoft app from one place — get **[VaultSoft Hub](https://github.com/VaultSoft/vaultsoft-hub/releases/latest)**.
+
 ---
 
 ## Screenshots
@@ -69,6 +71,16 @@ Or grab a release directly from [GitHub Releases](https://github.com/VaultSoft/P
 
 - Windows 10 or 11 (64-bit)
 - No Python required — standalone `.exe`, no installation needed
+
+---
+
+## Also by VaultSoft
+
+**[VaultSoft Hub](https://github.com/VaultSoft/vaultsoft-hub)** — install, update and launch every VaultSoft app from one window.
+
+**[SweptPC](https://vaultsoft.github.io/SweptPC)** — Free portable Windows PC cleaner. Remove junk files, browser caches, and system clutter in seconds.
+
+**[WaveScout](https://vaultsoft.github.io/WaveScout)** — Free portable Windows WiFi analyser. Scan nearby networks, check signal strength, find the best channel and monitor your connection live.
 
 ---
 

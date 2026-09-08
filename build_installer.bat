@@ -17,7 +17,7 @@ if errorlevel 1 (
 
 :: ── Install/upgrade build dependencies ───────────────────────────
 echo  [1/4] Installing build dependencies...
-pip install --quiet --upgrade pyinstaller PyQt6 pyqtgraph psutil GPUtil wmi pythonnet
+pip install --quiet --upgrade pyinstaller PyQt6 pyqtgraph psutil GPUtil wmi
 if errorlevel 1 ( echo  [ERROR] pip install failed. & pause & exit /b 1 )
 
 :: ── Build with PyInstaller ────────────────────────────────────────

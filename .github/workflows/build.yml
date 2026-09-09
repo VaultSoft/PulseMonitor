@@ -1,0 +1,50 @@
+name: PulseMonitor Build
+
+on:
+  push:
+    branches:
+      - master
+      - "agent/**"
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt -r requirements-build.txt
+
+      - name: Run tests
+        run: python -B -m unittest discover -s tests -v
+
+      - name: Verify syntax
+        run: python -B -m py_compile pulsemonitor.py app_metadata.py build.py
+
+      - name: Build portable package
+        run: python -B build.py
+
+      - name: Verify packaged files
+        shell: pwsh
+        run: |
+          if (!(Test-Path "dist\PulseMonitor\PulseMonitor.exe")) { throw "Missing packaged executable" }
+          if (!(Test-Path "dist\PulseMonitor_v$(Get-Content VERSION)_Portable.zip")) { throw "Missing portable ZIP" }
+          $rootIcu = Get-ChildItem "dist\PulseMonitor" -Filter "icu*.dll" -File -ErrorAction SilentlyContinue
+          if ($rootIcu) { throw "Root-level ICU DLL leakage: $($rootIcu.Name -join ', ')" }
+
+      - name: Upload portable package
+        uses: actions/upload-artifact@v4
+        with:
+          name: PulseMonitor-portable
+          path: dist/PulseMonitor_v*_Portable.zip

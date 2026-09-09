@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""PulseMonitor v1.1.0 — Professional PC Health Monitor (VaultSoft)"""
+"""PulseMonitor - Professional PC Health Monitor (VaultSoft)."""
 from __future__ import annotations
 import sys, os, time, platform, math, subprocess, threading, json, csv, sqlite3, weakref
 from datetime import datetime, date
@@ -10,6 +10,7 @@ import urllib.request, traceback
 import psutil
 import queue as _queue
 import copy as _copy
+from app_metadata import APP_VERSION, GITHUB_OWNER, GITHUB_REPO
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QPushButton,
     QVBoxLayout, QHBoxLayout, QGridLayout, QScrollArea, QFrame,
@@ -27,10 +28,6 @@ from PyQt6.QtGui import (
     QLinearGradient, QPainterPath, QAction, QCursor, QMouseEvent,
     QDesktopServices,
 )
-
-APP_VERSION  = "1.1.0"
-GITHUB_OWNER = "VaultSoft"
-GITHUB_REPO  = "PulseMonitor"
 
 _IS_WIN = platform.system() == "Windows"
 
@@ -603,7 +600,11 @@ class MonitorThread(QThread):
                     val = float(s.Value or 0)
                     if val > 0 and (best is None or val > best): best = val
             return best
-        except Exception:
+        except Exception as exc:
+            _write_runtime_note_once(
+                f"lhm-wmi-{kind}",
+                f"LibreHardwareMonitor WMI unavailable for {kind}: {exc}",
+            )
             self._lhm_wmi = None
             return None
 
@@ -3130,6 +3131,7 @@ class UpdateBanner(QWidget):
 _APP_DATA_DIR = os.path.join(os.environ.get("APPDATA", os.path.expanduser("~")), "PulseMonitor")
 os.makedirs(_APP_DATA_DIR, exist_ok=True)
 _CRASH_LOG = os.path.join(_APP_DATA_DIR, "crash.log")
+_RUNTIME_NOTES_LOGGED: set[str] = set()
 
 def _write_crash(exc_type, exc_value, exc_tb):
     try:
@@ -3138,6 +3140,17 @@ def _write_crash(exc_type, exc_value, exc_tb):
             f.write(f"CRASH  {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n" + "="*70 + "\n")
             f.write("".join(traceback.format_exception(exc_type, exc_value, exc_tb)) + "\n")
     except Exception: pass
+
+def _write_runtime_note_once(key: str, message: str):
+    if key in _RUNTIME_NOTES_LOGGED:
+        return
+    _RUNTIME_NOTES_LOGGED.add(key)
+    try:
+        with open(_CRASH_LOG, "a", encoding="utf-8") as f:
+            f.write(f"\nNOTE   {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(message + "\n")
+    except Exception:
+        pass
 
 def _qt_message_handler(mode, context, message):
     from PyQt6.QtCore import QtMsgType
@@ -3195,6 +3208,13 @@ def main():
     win.show()
     win.raise_()
     win.activateWindow()
+
+    smoke_exit_ms = os.environ.get("PULSEMONITOR_SMOKE_EXIT_MS")
+    if smoke_exit_ms:
+        try:
+            QTimer.singleShot(max(0, int(smoke_exit_ms)), app.quit)
+        except ValueError:
+            pass
 
     # DWM rounded corners (Windows 11)
     if _IS_WIN:

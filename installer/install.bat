@@ -4,7 +4,12 @@ title PulseMonitor Setup
 
 echo.
 echo  ============================================================
-echo   PulseMonitor v1.3.0  --  Setup
+if exist "%~dp0VERSION" (
+    set /p "APP_VERSION="<"%~dp0VERSION"
+) else (
+    set "APP_VERSION=unknown"
+)
+echo   PulseMonitor v%APP_VERSION%  --  Setup
 echo   Professional PC Health Monitor
 echo  ============================================================
 echo.
@@ -100,7 +105,7 @@ echo.
 echo  [5/5] Registering with Windows (Add/Remove Programs)...
 set "REGKEY=HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\PulseMonitor"
 reg add "%REGKEY%" /v "DisplayName"     /t REG_SZ    /d "PulseMonitor"                        /f >nul
-reg add "%REGKEY%" /v "DisplayVersion"  /t REG_SZ    /d "1.3.0"                               /f >nul
+reg add "%REGKEY%" /v "DisplayVersion"  /t REG_SZ    /d "%APP_VERSION%"                       /f >nul
 reg add "%REGKEY%" /v "Publisher"       /t REG_SZ    /d "PulseMonitor"                        /f >nul
 reg add "%REGKEY%" /v "InstallLocation" /t REG_SZ    /d "%INSTALL_DIR%"                       /f >nul
 reg add "%REGKEY%" /v "UninstallString" /t REG_SZ    /d "\"%INSTALL_DIR%\uninstall.bat\""     /f >nul

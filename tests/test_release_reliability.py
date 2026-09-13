@@ -116,7 +116,8 @@ class ReleaseReliabilityTests(unittest.TestCase):
         self.assertNotIn("HidSharp", spec)
 
     def test_github_actions_build_verifies_package_without_releasing(self) -> None:
-        workflow = (ROOT / ".github" / "workflows" / "build.yml").read_text(encoding="utf-8")
+        workflow = (ROOT / ".github" / "workflows" / "build-verification.yml").read_text(encoding="utf-8")
+        self.assertIn("name: Build Verification", workflow)
         self.assertIn("python -B build.py", workflow)
         self.assertIn("actions/upload-artifact", workflow)
         self.assertNotIn("softprops/action-gh-release", workflow)

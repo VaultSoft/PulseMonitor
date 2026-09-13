@@ -1,4 +1,4 @@
-name: PulseMonitor Build
+name: Build Verification
 
 on:
   push:

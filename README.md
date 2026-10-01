@@ -23,6 +23,8 @@
 </p>
 
 > 🆕 **New:** install, update and launch every VaultSoft app from one place — get **[VaultSoft Hub](https://github.com/VaultSoft/vaultsoft-hub/releases/latest)**.
+>
+> 🎙️ **Also new:** **[ScribeVault](https://vaultsoft.co.uk/scribevault/)** — offline transcription for Windows. Turns recordings into text on your own PC; nothing is uploaded. Free trial.
 
 ---
 
